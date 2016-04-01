@@ -16,8 +16,8 @@
                                                                                               foaf:primaryTopic ssbd:Ontology ;
                                                                                               cc:license <https://creativecommons.org/publicdomain/zero/1.0/> .
 ssbd:Ontology a owl:Ontology ;
-              rdfs:label "General Transit Feed Specification"@en ;
-              dct:description "This ontology is a translation of the General Transit Feed Specification towards URIs. Its intended use is creating an exchange platform where the Linked GTFS model can be used as a start to get the right data into the right format. For semantics of the classes and properties, see https://developers.google.com/transit/gtfs/reference."@en ;
+              rdfs:label "Same Same but Different"@en ;
+              dct:description "This ontology is... something different"@en ;
               vann:preferredNamespacePrefix "ssbd" ;
               vann:preferredNamespaceUri "http:/example.org/ssbd#";
               dct:creator <http://csarven.ca/#i> , <http://pieter.pm/#me> .
