@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix status: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix ssbd : <http://example.org/ssbd#> .
+
+
+<https://raw.githubusercontent.com/pietercolpaert/samesamebutdifferent/master/vocabulary.ttl> a foaf:Document .
+                                                                                              foaf:primaryTopic ssbd:Ontology ;
+                                                                                              cc:license <https://creativecommons.org/publicdomain/zero/1.0/> .
+ssbd:Ontology a owl:Ontology ;
+              rdfs:label "General Transit Feed Specification"@en ;
+              dct:description "This ontology is a translation of the General Transit Feed Specification towards URIs. Its intended use is creating an exchange platform where the Linked GTFS model can be used as a start to get the right data into the right format. For semantics of the classes and properties, see https://developers.google.com/transit/gtfs/reference."@en ;
+              vann:preferredNamespacePrefix "ssbd" ;
+              vann:preferredNamespaceUri "http:/example.org/ssbd#";
+              dct:creator <http://csarven.ca/#i> , <http://pieter.pm/#me> .
+
+ssbd:sameAs a rdf:Property ;
+            owl:sameAs owl:sameAs ;
+            rdfs:label "It's the same as but don't take this as a fact"@en ;
+            rdfs:comment "We could stop building naive applications that treat assertion as fact, and instead only reason on statements we accept based on trust and provenance. Wasn't that the plan?"@en.
+
+ssbd:isKindaLike a rdf:Property ;
+                 rdfs:label "It's kinda like something else but not really"@en.
+                 
+owl:sameSameButDifferent rdfs:subPropertyOf ssbd:isKindaLike ;
+                         owl:sameSameButDifferent owl:sameAs .
