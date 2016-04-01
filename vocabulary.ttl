@@ -19,7 +19,7 @@ ssbd:Ontology a owl:Ontology ;
               rdfs:label "Same Same but Different"@en ;
               dct:description "This ontology is... something different"@en ;
               vann:preferredNamespacePrefix "ssbd" ;
-              vann:preferredNamespaceUri "http:/example.org/ssbd#";
+              vann:preferredNamespaceUri "http://example.org/ssbd#";
               dct:creator <http://csarven.ca/#i> , <http://pieter.pm/#me> .
 
 ssbd:sameAs a rdf:Property ;
